@@ -1,0 +1,250 @@
+/* Importing Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #333;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ff6f61;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    z-index: 2;
+}
+
+header p {
+    font-size: 1.4em;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ff6f61, #c94c4c);
+    background-size: 400% 400%;
+    animation: gradient-animation 8s ease infinite;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container Styling */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(1);
+    animation: containerFadeIn 1s ease;
+}
+
+@keyframes containerFadeIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Form and Input Styles */
+form {
+    margin: 20px 0;
+    position: relative;
+    animation: formSlideUp 1.5s ease;
+}
+
+@keyframes formSlideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ff6f61;
+    border-radius: 8px;
+    font-size: 1.1em;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #feb47b;
+    box-shadow: 0 4px 8px rgba(255, 110, 97, 0.3);
+}
+
+button {
+    padding: 12px 30px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #c94c4c;
+    transform: translateY(-3px);
+}
+
+/* Animated Result Section */
+#result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    animation: resultFadeIn 1s ease;
+}
+
+@keyframes resultFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Info and About Sections */
+section.about, section.info {
+    padding: 40px 20px;
+    background-color: #fce4ec;
+    text-align: center;
+    animation: sectionFadeIn 1.5s ease;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #ff6f61;
+}
+
+section p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+@keyframes sectionFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff6f61;
+    color: white;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #feb47b; /* Soft orange */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin: 0 10px; /* Space between buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #ff6f61; /* Darker coral on hover */
+    transform: translateY(-2px);
+}
+
+/* About and Contact Sections */
+section.about, section.info {
+    padding: 40px 20px;
+    background-color: #fce4ec; /* Soft pink */
+    text-align: center;
+    animation: sectionFadeIn 1.5s ease;
+    margin: 20px 0; /* Added margin for spacing */
+}
+
+section h2 {
+    font-size: 2em;
+    color: #ff6f61; /* Coral color */
+}
+
+section p {
+    font-size: 1.2em;
+    margin: 15px 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+/* Contact Section Links */
+h3 {
+    margin-top: 20px;
+    color: #ff6f61; /* Coral color for headings */
+}
+
+a {
+    color: #feb47b; /* Light orange for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Change to coral on hover */
+}
